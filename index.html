@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎯 Adivinhe o Número</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎯 Adivinhe o Número</h1>
+            <p class="subtitle">Eu pensei em um número entre 1 e 100. Consegue adivinhar?</p>
+        </header>
+
+        <main class="game-area">
+            <div class="game-info">
+                <div class="info-item">
+                    <span class="label">Tentativas:</span>
+                    <span id="attempts" class="value">0</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Melhor Score:</span>
+                    <span id="best-score" class="value">-</span>
+                </div>
+            </div>
+
+            <div class="input-section">
+                <input type="number" id="guess-input" min="1" max="100" placeholder="Digite um número (1-100)">
+                <button id="submit-btn" class="btn btn-primary">🚀 Tentar</button>
+            </div>
+
+            <div id="message" class="message"></div>
+
+            <div class="history-section">
+                <h3>🕒 Histórico de Palpites</h3>
+                <div id="history" class="history"></div>
+            </div>
+
+            <button id="new-game-btn" class="btn btn-secondary" style="display: none;">🔄 Novo Jogo</button>
+        </main>
+
+        <footer>
+            <p>💡 Dica: Use a estratégia de busca binária para encontrar o número mais rapidamente!</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
